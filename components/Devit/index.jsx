@@ -1,16 +1,20 @@
 import Avatar from '../Avatar';
 
-const Devit = ({avatar, username, message, id}) => {
+const Devit = ({id, avatar, userName, content, userId, createdAt}) => {
+
     return (
         <>
             <article>
                 <div>
-                    <Avatar src={avatar} alt={username}/>
+                    <Avatar src={avatar} alt={userName}/>
                 </div>
                 
                 <section>
-                    <strong>{username}</strong>
-                    <p>{message}</p>
+                    <header>
+                        <strong>{userName}</strong>
+                        <date>{createdAt}</date>
+                    </header>
+                    <p>{content}</p>
                 </section>
             </article>
 
